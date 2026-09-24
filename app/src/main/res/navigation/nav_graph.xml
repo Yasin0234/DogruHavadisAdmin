@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.korkutsoftware.doruhavadisadmin.HomeFragment"
+        android:label="Ana Sayfa"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.korkutsoftware.doruhavadisadmin.NewsFragment"
+        android:label="Haberler"
+        tools:layout="@layout/fragment_news" />
+
+    <fragment
+        android:id="@+id/navigation_edit"
+        android:name="com.korkutsoftware.doruhavadisadmin.EditFragment"
+        android:label="Edit"
+        tools:layout="@layout/fragment_edit">
+        <argument
+            android:name="newsId"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_columnist"
+        android:name="com.korkutsoftware.doruhavadisadmin.ColumnistFragment"
+        android:label="Köşe Yazısı"
+        tools:layout="@layout/fragment_columnist" />
+
+    <fragment
+        android:id="@+id/navigation_tests"
+        android:name="com.korkutsoftware.doruhavadisadmin.TestsFragment"
+        android:label="Testler"
+        tools:layout="@layout/fragment_tests">
+        <argument
+            android:name="imageUri"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="shareText"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.korkutsoftware.doruhavadisadmin.ProfileFragment"
+        android:label="Profil"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.korkutsoftware.doruhavadisadmin.SettingsFragment"
+        android:label="Ayarlar"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="com.korkutsoftware.doruhavadisadmin.AboutFragment"
+        android:label="Hakkında"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/navigation_site_status"
+        android:name="com.korkutsoftware.doruhavadisadmin.SiteStatusFragment"
+        android:label="Site Durumu"
+        tools:layout="@layout/fragment_site_status" />
+</navigation>

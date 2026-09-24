@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E0E0E0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cbSelectNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true" />
+
+            <ImageView
+                android:id="@+id/ivNewsThumb"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="8dp"
+                android:background="#EEE"
+                android:contentDescription="Haber Görseli"
+                tools:src="@drawable/ic_news" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNewsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textStyle="bold"
+                    android:textColor="#111"
+                    android:textSize="13sp"
+                    tools:text="Örnek Haber Başlığı Buraya Gelecek" />
+
+                <TextView
+                    android:id="@+id/tvNewsSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="#666"
+                    android:textSize="11sp"
+                    tools:text="Gaziantep / Şahinbey" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:paddingStart="32dp"
+            tools:ignore="RtlSymmetry">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipMainHeadline"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="⭐ Ana Manşet"
+                android:textSize="11sp"
+                android:layout_marginEnd="6dp" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cbCoverNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📌 Ana Sayfa (Kapak)"
+                android:textSize="11sp"
+                android:checked="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

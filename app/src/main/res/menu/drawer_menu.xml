@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_profile"
+            android:icon="@drawable/ic_person"
+            android:title="Profil" />
+        <item
+            android:id="@+id/navigation_settings"
+            android:icon="@drawable/ic_setttings"
+            android:title="Ayarlar" />
+        <item
+            android:id="@+id/navigation_about"
+            android:icon="@drawable/ic_aciklama"
+            android:title="Hakkında" />
+        <item
+            android:id="@+id/navigation_site_status"
+            android:icon="@drawable/ic_maintance"
+            android:title="@string/site_status_title" />
+        <item
+            android:id="@+id/navigation_digital_newspapers"
+            android:icon="@drawable/ic_news"
+            android:title="📚 Dijital Gazeteler" />
+    </group>
+
+    <item android:title="Oturum">
+        <menu>
+            <item
+                android:id="@+id/navigation_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Çıkış Yap" />
+        </menu>
+    </item>
+</menu>

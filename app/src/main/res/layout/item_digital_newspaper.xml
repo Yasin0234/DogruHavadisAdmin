@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="@color/white"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E0E0E0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvNewspaperTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textColor="#111"
+                android:textSize="16sp"
+                tools:text="📰 Doğru Havadis Gazetesi - 27 Mayıs 2024" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPageSize"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:textColor="#333"
+                android:textSize="11sp"
+                tools:text="A3 Formatı" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvIssueDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="#666"
+            android:textSize="12sp"
+            tools:text="📅 Yayın Tarihi: 20 Mayıs 2024 - 27 Mayıs 2024" />
+
+        <TextView
+            android:id="@+id/tvHeadlineTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="#FAFAFA"
+            android:padding="8dp"
+            android:textColor="#D32F2F"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            tools:text="⭐ Ana Manşet: Gaziantep'te Dev Sanayi Yatırımı Açıklandı" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvNewsCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#555"
+                android:textSize="12sp"
+                tools:text="📊 12 Haber • 2 Köşe Yazısı" />
+
+            <TextView
+                android:id="@+id/tvPublisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#888"
+                android:textSize="11sp"
+                tools:text="Doğru Havadis Admin" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEE"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnViewPdf"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:text="👁️ İncele / Oku"
+                android:textSize="12sp"
+                app:strokeColor="#1976D2"
+                android:textColor="#1976D2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnShareNewspaper"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:text="📲 Paylaş"
+                android:textSize="12sp"
+                app:strokeColor="#388E3C"
+                android:textColor="#388E3C" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeleteNewspaper"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🗑️ Sil"
+                android:textSize="12sp"
+                android:textColor="#D32F2F" />
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
