@@ -257,10 +257,11 @@ class EditFragment : Fragment() {
     private fun generateShareText(news: News): String {
         val title = news.title
         val slug = toSlug(title)
+        val section = if (isColumnist) "yazar" else "haber"
         val link = if (slug.isNotEmpty()) {
-            "https://www.dogruhavadis.com/#/haber/${slug}_${news.id}"
+            "https://www.dogruhavadis.com/${section}/${slug}_${news.id}"
         } else {
-            "https://www.dogruhavadis.com/#/haber/${news.id}"
+            "https://www.dogruhavadis.com/${section}/${news.id}"
         }
         
         // Temel hashtag'ler
